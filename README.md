@@ -1,4 +1,4 @@
-# OpenGL-Matrix-Functions-for-C
+# OpenGL-Matrix-Library
 
 I couldn't find any good matrix libraries written in C so I made this one.
 
