@@ -91,7 +91,7 @@ inline void mat4_translate(mat4 M, float x, float y, float z, mat4 o)
 	n[1][3] = y;
 	n[2][3] = z;
 
-	mul(M, n, o);
+	mat4_mul(M, n, o);
 }
 
 inline void mat4_rotate(mat4 M, float x, float y, float z, mat4 o)
@@ -132,9 +132,9 @@ inline void mat4_rotate(mat4 M, float x, float y, float z, mat4 o)
 	rz[1][0] =  sinz;
 	rz[1][1] =  cosz;
 
-	mul(M, rx, o);
-	mul(o, ry, o);
-	mul(o, rz, o);
+	mat4_mul(M, rx, o);
+	mat4_mul(o, ry, o);
+	mat4_mul(o, rz, o);
 }
 
 inline void mat4_scale(mat4 M, float x, float y, float z, mat4 o)
@@ -146,5 +146,5 @@ inline void mat4_scale(mat4 M, float x, float y, float z, mat4 o)
 	n[1][1] = y;
 	n[2][2] = z;
 
-	mul(M, n, o);
+	mat4_mul(M, n, o);
 }
